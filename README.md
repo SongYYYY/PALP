@@ -8,6 +8,28 @@ This repository contains the implementation for reproducing the results presente
 - `cora`
 - `citeseer`
 
+## Environment Setup
+
+### Prerequisites
+- CUDA 11.8
+- Python 3.8 or higher
+- pip or conda
+
+### Installation
+
+```bash
+# Clone the repository
+git clone https://github.com/yourusername/PALP.git
+cd PALP
+
+# Install dependencies
+pip install -r requirements.txt
+```
+
+## Pretraining and Checkpoints
+
+The pretraining of PALP was conducted on ogbn-papers100M. Due to the large scale of this graph, which takes up ~200G to store the node features and structures, we were unable to release the processed data in the repo. To reproduce the results from our paper, we provide the pretrained checkpoints directly in the `ckpt-1` and `ckpt-2` directories.
+
 ## Data Structure
 
 The repository contains the following key directories:
@@ -26,20 +48,10 @@ Both models were pretrained on ogbn-papers100M. The configuration files for thes
 - `model_1_config.yaml`
 - `model_2_config.yaml`
 
-## Installation
-
-```bash
-# Clone the repository
-git clone https://github.com/yourusername/PALP.git
-cd PALP
-
-# Install dependencies
-pip install -r requirements.txt
-```
 
 ## Usage
 
-To run the downstream experiments, use the following command:
+To test the pretrained checkpoints with our proposed adaptation strategy, use the following command:
 
 ```bash
 python test_link_merge_all.py --data_name 'cora' --train_ratio 0.4
