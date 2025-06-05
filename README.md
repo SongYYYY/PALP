@@ -1,3 +1,5 @@
+[![DOI](https://zenodo.org/badge/987433729.svg)](https://doi.org/10.5281/zenodo.15597907)
+
 # PALP: A Scalable Pretraining Framework for Link Prediction with Efficient Adaptation
 
 This repository contains the official implementation for the paper "A Scalable Pretraining Framework for Link Prediction with Efficient Adaptation" accepted at KDD 2025.
